@@ -1,19 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from "styled-components"
+import { LayOut } from "features/common";
 
-const WriteBoard = () => (<>
+const QnAWrite = () => (
+    <LayOut>
     <div>
-        <table border="1" width='1200' align='center'>
+        <table border="1" width="1200" align="center">
             <tr>
                 <th colSpan="2">
-                    자유게시판 글쓰기
+                    QnA 글쓰기
                 </th>
             </tr>
             <tr>
                 <td width="50">
                     <select>                   
-                        <option>잡담</option>
-                        <option>확진자 발견</option>
+                        <option>질문</option>
+                        <option>백신</option>
+                        <option>코로나 확진</option>
                     </select>
                     <input type="text" placeholder="제목을 입력하시오"
                     maxLength='20' cols="100"/>
@@ -61,12 +64,11 @@ const WriteBoard = () => (<>
                 </td>
             </tr>
         </table>
-        
     </div>
-</>
+    </LayOut>
 )
 
-export default WriteBoard
+export default QnAWrite
 
 const Note = styled.div`
     display:none

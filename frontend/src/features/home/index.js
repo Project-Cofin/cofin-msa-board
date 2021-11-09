@@ -1,1 +1,1 @@
-export { default as CofinHomepage } from "features/home/pages/CofinHomepage"
+export { default as HomePage } from "features/home/pages/HomePage"
