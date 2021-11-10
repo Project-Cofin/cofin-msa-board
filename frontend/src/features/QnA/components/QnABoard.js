@@ -1,67 +1,76 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { LayOut } from "features/common";
+import QnATable from "./QnATable";
+import QnATableColumn from "./QnATableColumn";
+import QnATableRow from "./QnATableRow";
 
-const QnABoard = () => (
+
+const QnABoard = props => {
+    const [ dataList, setDataList ] = useState([])
+
+    useEffect(() => {
+
+    }, [])
+    return(
     <LayOut>
-        <div>
-            <table border="1" width="1200" align="center">
-                <Free>
-                    <td colSpan="5" align="center">QnA 게시판</td>
-                </Free>
-                <tr align='center'>
-                    <Ctg>분류</Ctg>
-                    <Title width="900">제목</Title>
-                    <Writer>글쓴이</Writer>
-                    <Date>게시일</Date>
-                </tr>
-                <tr height="750" align="center">
-                    <Main colSpan="5">
-                        글이 없습니다.
-                    </Main>
-                </tr>
-                <tr>
-                    <td colSpan="5" align="center"></td>
-                </tr>
-                <tr>
-                    <td colSpan="1" align="left">
-                        <input type="button" align="left" value="신고하기"></input>
-                    </td>
-                    <td colspan="4" align='right'>                    
-                        <input type="button" onClick="location.href='http://localhost:3000/write'" value="글쓰기"/>
+        <body>
+            <div class="ui middle aligned center aligned grid">
+                <h2 class="ui teal image header" align="center">
+                    QnA 게시판
+                </h2>
+                <div class="ui large form">
+                    <div class="ui stacked segment">
                         
-                        <input type="button" value="수정"/>
-                        <input type="button" value="삭제"/>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                        <QnATable headersName={['번호', '제목', '작성자', '작성일', '조회수']}>
+
+                            <QnATableRow>
+                                <QnATableColumn>1</QnATableColumn>
+                                <QnATableColumn>첫번째 게시글</QnATableColumn>
+                                <QnATableColumn>ss지존준넥서스ss</QnATableColumn>
+                                <QnATableColumn>2020-01-01</QnATableColumn>
+                                <QnATableColumn>12</QnATableColumn>
+                            </QnATableRow>
+                            <QnATableRow>
+                                <QnATableColumn>2</QnATableColumn>
+                                <QnATableColumn>두번째 게시글</QnATableColumn>
+                                <QnATableColumn>채강$$준넥서스</QnATableColumn>
+                                <QnATableColumn>2020-04-16</QnATableColumn>
+                                <QnATableColumn>5</QnATableColumn>
+                            </QnATableRow>
+                            <QnATableRow>
+                                <QnATableColumn>3</QnATableColumn>
+                                <QnATableColumn>세번째 게시글</QnATableColumn>
+                                <QnATableColumn>허접♥등신♥</QnATableColumn>
+                                <QnATableColumn>2020-09-07</QnATableColumn>
+                                <QnATableColumn>66</QnATableColumn>
+                            </QnATableRow>
+                            <QnATableRow>
+                                <QnATableColumn>4</QnATableColumn>
+                                <QnATableColumn>네번째 게시글</QnATableColumn>
+                                <QnATableColumn>닉넴짓기귀찮다</QnATableColumn>
+                                <QnATableColumn>2021-07-29</QnATableColumn>
+                                <QnATableColumn>43</QnATableColumn>
+                            </QnATableRow>
+
+                        </QnATable>
+                        <a href="/write"><button class="ui fluid large teal submit button">게시글 작성하기</button></a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </body><br/>
+        
     </LayOut>
-)
+    )
+}
 
 export default QnABoard
 
 
-const Free = styled.tr`
-    
-`
-
-const Ctg = styled.td`
-    
-`
-
-const Title = styled.td`
-    
-`
-
-const Writer = styled.td`
-   
-`
-
-const Date = styled.td`
-    
-`
-
-const Main = styled.td`
-    
+const P = styled.p`
+    text-align: right;
+     
 `
