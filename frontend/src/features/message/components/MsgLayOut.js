@@ -2,10 +2,10 @@ import * as React from 'react';
 import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
 
-import 'features/common/style/LayOutStyle.css'
-import { Navigation } from '..';
+import 'features/message/style/MsgLayOutStyle.css'
+import { Navigation } from 'features/common';
 
-const LayOut = (props) => {
+const MsgLayOut = (props) => {
   return (
     <div class = "wrapper">
       <div class="container">
@@ -20,4 +20,4 @@ const LayOut = (props) => {
   );
 }
 
-export default LayOut;
+export default MsgLayOut;

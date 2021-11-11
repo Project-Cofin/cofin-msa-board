@@ -24,7 +24,6 @@
 }
 .item3{
     grid-column: 1/ span 4;
-
    
 
 }
@@ -44,4 +43,3 @@
 .item6{
     grid-column: 1/ span 5;
 }
-

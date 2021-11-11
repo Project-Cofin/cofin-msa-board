@@ -19,6 +19,7 @@ const LocalMapInfo = () => {
 export default LocalMapInfo
 
 const InfoDiv = styled.div`
+
     width: 200px;
     height: 300px;
     border: solid 1px black;
@@ -26,5 +27,6 @@ const InfoDiv = styled.div`
 `
 
 const InfoUl = styled.ul`
+    text-align: center;
     list-style: none;
 `

@@ -1,4 +1,5 @@
 import React from "react"
+
 import QnABoard from "../components/QnABoard";
 
 const QnABoardPage = props =>{
