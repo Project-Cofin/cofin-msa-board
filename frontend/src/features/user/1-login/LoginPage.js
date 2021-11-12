@@ -2,11 +2,13 @@ import React from 'react'
 import UserLogin from 'features/user/1-login/UserLogin'
 import UserLost from './UserLost'
 import UserJoin from 'features/user/2-join/UserJoin'
+import { LayOut } from 'features/common'
 
 
 export default function LoginPage(){
     return(
-        <div>       
+        <div>
+            <LayOut>       
             <text align="center"><h1><b>로그인</b></h1></text>
             <br/><br/>
             <UserLogin/>
@@ -17,6 +19,7 @@ export default function LoginPage(){
             <br/><br/>
             <UserJoin><b>회원 가입</b></UserJoin>
             {/* onclick/uncollapse module */}
+            </LayOut>
         </div>
     )
 }
