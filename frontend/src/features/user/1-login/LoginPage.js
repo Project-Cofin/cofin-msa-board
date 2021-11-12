@@ -2,7 +2,7 @@ import React from 'react'
 import UserLogin from 'features/user/1-login/UserLogin'
 import UserLost from './UserLost'
 import UserJoin from 'features/user/2-join/UserJoin'
-import { LayOut } from 'features/common'
+import { LayOut } from 'features/common/index'
 
 
 export default function LoginPage(){
@@ -17,7 +17,7 @@ export default function LoginPage(){
             {/* <UserLost><b>아이디/비번 찾기</b></UserLost> */}
             {/* onclick/uncollapse module */}
             <br/><br/>
-            <UserJoin><b>회원 가입</b></UserJoin>
+            {/* <UserJoin><b>회원 가입</b></UserJoin> */}
             {/* onclick/uncollapse module */}
             </LayOut>
         </div>

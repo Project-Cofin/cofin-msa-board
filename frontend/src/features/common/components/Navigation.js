@@ -11,6 +11,7 @@ export default function Navigation () {
             <Ul>
                 <Li><Link to= "/">Home</Link></Li>
                 <Li><Link to= "/user">로그인</Link></Li>
+                <Li><Link to= "/join">회원가입</Link></Li>
 
                 <Li><Link to= "/QnA">QnA</Link></Li>
                 <Li><Link to= "/organ/local">국내지도</Link></Li>
@@ -25,10 +26,10 @@ export default function Navigation () {
             </Ul>
             <ul>
                 <li type='none' align='right'>
-                    <label for="user-id"/>아이디
-                    <input type="text" id="user-id"/>
+                    <label for="user-id"/>아이디 &nbsp;
+                    <input type="text" id="user-id"/>&nbsp; 
                 
-                    <label for="pwd1"/> 비밀번호 
+                    <label for="pwd1"/> 비밀번호 &nbsp;
                     <input type="password" id="pwd"/>&nbsp;
                     
                     <input type="submit" value="로그인"/>&nbsp;
@@ -39,13 +40,15 @@ export default function Navigation () {
 }
 const Ul = styled.ul`
 
+
+    
 `
 
 const Li = styled.li`
 
-margin-left: 1em;
-
-text-align:center;
-display:inline-block;
-font-family: 'UhBeeRami';
+    
+    margin-left: 1em;
+    text-align:center;
+    display:inline-block;
+    font-family: 'UhBeeRami';
 `

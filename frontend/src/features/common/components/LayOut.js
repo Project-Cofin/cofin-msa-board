@@ -14,7 +14,7 @@ const LayOut = (props) => {
         <span class ="item3">{props.children}333</span>
         <span class ="item4">444</span>
         <span class ="item5">555</span>
-        <span class ="item7"><Footer/></span>
+        <span class ="item6"><Footer/></span>
       </div>
     </div>
   );

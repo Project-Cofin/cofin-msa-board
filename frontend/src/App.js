@@ -8,7 +8,7 @@ import { QnABoardPage, QnAWritePage } from 'features/QnA/index';
 import MedptPage from "features/medpt/MedptPage";
 import {MsgPage} from "features/message/index";
 import NewsPage from "features/news/NewsPage";
-import {LoginPage} from "features/user/index";
+import {LoginPage, JoinPage} from "features/user/index";
 import {ChartPage} from 'features/corona/index';
 
 //Attempted import error: 'Action' is not exported from 'history'. histroy 버전 5로 업.
@@ -34,6 +34,7 @@ function App() {
           <Route path='/message' element={<MsgPage/>}/>
           <Route path='/news' element={<NewsPage/>}/>
           <Route path='/user' element={<LoginPage/>}/>
+          <Route path='/join' element={<JoinPage/>}/>
       
     </Routes>  
 </>)}

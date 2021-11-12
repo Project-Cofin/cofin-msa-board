@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import 'features/common/style/LayOutStyle.css'
 
 const Footer = () => {
     return(
