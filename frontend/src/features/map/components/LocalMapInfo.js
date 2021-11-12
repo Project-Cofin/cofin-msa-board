@@ -27,6 +27,6 @@ const InfoDiv = styled.div`
 `
 
 const InfoUl = styled.ul`
-    text-align: center;
+
     list-style: none;
 `

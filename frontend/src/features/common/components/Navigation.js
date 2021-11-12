@@ -10,8 +10,8 @@ export default function Navigation () {
         <div>
             <Ul>
                 <Li><Link to= "/">Home</Link></Li>
-                <Li><Link to= "/userpage">로그인</Link></Li>
-                <Li><Link to= "/membership">회원가입</Link></Li>
+                <Li><Link to= "/user">로그인</Link></Li>
+
                 <Li><Link to= "/QnA">QnA</Link></Li>
                 <Li><Link to= "/organ/local">국내지도</Link></Li>
                 <Li><Link to= "/organ/world">세계지도</Link></Li>

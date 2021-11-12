@@ -21,4 +21,5 @@ export default Options
 
 const OptionUl = styled.ul`
     list-style: none;
+    text-align: center;
 `

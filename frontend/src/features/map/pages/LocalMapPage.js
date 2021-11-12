@@ -1,7 +1,7 @@
 import { LayOut } from "features/common";
 import React from "react";
 
-import { Geolocation, LocalMap, LocalMapInfo, Options } from "..";
+import { LocalMap, LocalMapInfo, Options } from "..";
 
 const LocalMapPage = () => {
 
@@ -11,7 +11,6 @@ const LocalMapPage = () => {
             <Options/>
             <LocalMap/>
             <LocalMapInfo/>
-            {/* <Geolocation/> */}
         </div>
     </LayOut>
     </>);

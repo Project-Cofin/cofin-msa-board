@@ -1,10 +1,11 @@
-import MsgLayOut from 'features/message/components/MsgLayOut'
+
 import React from 'react'
 import MsgTable from 'features/message/components/MsgTable'
+import { LayOut } from 'features/common'
 
 export default function MsgPage(){
     return(
-        <MsgLayOut>
+        <LayOut>
             <div>       
                 
                 <text align="center"><h1><b>재난문자</b></h1></text>
@@ -13,6 +14,6 @@ export default function MsgPage(){
                 {/* number of rows/info + page arrowss */}
                 
             </div>
-        </MsgLayOut>
+        </LayOut>
     )
 }

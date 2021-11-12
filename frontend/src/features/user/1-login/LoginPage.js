@@ -1,7 +1,8 @@
 import React from 'react'
-import UserLogin from './UserLogin'
+import UserLogin from 'features/user/1-login/UserLogin'
 import UserLost from './UserLost'
-import UserJoin from '../2-join/UserJoin'
+import UserJoin from 'features/user/2-join/UserJoin'
+
 
 export default function LoginPage(){
     return(
@@ -11,7 +12,7 @@ export default function LoginPage(){
             <UserLogin/>
             {/* redirect to main page after login success? */}
             <br/><br/>
-            <UserLost><b>아이디/비번 찾기</b></UserLost>
+            {/* <UserLost><b>아이디/비번 찾기</b></UserLost> */}
             {/* onclick/uncollapse module */}
             <br/><br/>
             <UserJoin><b>회원 가입</b></UserJoin>
