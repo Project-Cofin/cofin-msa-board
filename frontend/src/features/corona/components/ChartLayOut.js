@@ -3,15 +3,15 @@ import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
 
 import 'features/corona/style/ChartLayOutStyle.css'
-import { Navigation } from 'features/common';
+import { NavBar } from 'features/common';
 import { AppBugReports, HeaderChart, MainChart, StackChart } from 'features/corona/index';
 
 const ChartLayOut = () => {
   return (
     <div class = "wrapper">
       <div class="container">
-        <span class ="item1"><Header/></span>
-        <span class ="item2"><Navigation/></span>
+        <span class ="item1"><NavBar/></span>
+        <span class ="item2"></span>
         <span class ="item3"><HeaderChart/>헤드차트</span>
         <span class ="item4"><AppBugReports/>앱1</span>
         <span class ="item8"><AppBugReports/>앱2</span>
