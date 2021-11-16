@@ -1,10 +1,10 @@
-package shop.cofin.board;
+package shop.cofin.board.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BoardApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
