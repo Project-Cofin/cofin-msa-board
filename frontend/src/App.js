@@ -24,7 +24,7 @@ function App() {
           <Route path='/main/corona' element={<ChartPage/>}/>
 
 
-          <Route path="/QnA" element={<QnABoardPage/>}/>
+          <Route path="/api/QnA" element={<QnABoardPage/>}/>
           <Route path="/write" element={<QnAWritePage/>}/>
           <Route path="/organ/chat" element={<Chat/>}/>
           <Route path="/organ/local" element={<LocalMapPage/>}/>

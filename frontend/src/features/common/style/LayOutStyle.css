@@ -1,10 +1,13 @@
+body {
+    padding-right: 00px;
+    box-sizing: content-box;
+  }
+
 .container{
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 200px, 1fr, 1fr ;
-    
-    row-gap: 10px;
-    column-gap: 10px;
+    grid-template-columns: 200px;
+  
 }
 .wrapper{
 
@@ -13,35 +16,43 @@
     min-height: 100vh;
 }
 
-.item1{
-    grid-column: 1/5 ;
-    -ms-grid-column-span: span 5 ;
+.item1{/*헤더*/
+    grid-column: 1/ span 1 ;
   
-
 }
-.item2{
-    grid-column: 1/ span 5;
-   
 
-}
-.item3{
-    grid-column: 1/ span 4;   
+.item2{/*네비바*/
+    grid-column: 2/ span 3 ;
+    grid-row: 1;
 
 }
 
-.item4{
+.item3{/*로그인*/
+    grid-column: 5/ span 2 ;
+    grid-row: 1;   
+  
+}
+
+.item4{/*푸터*/
+    grid-column: 1/ span 6;
+}
+
+
+.item5{
+    grid-column: 2/ span 4;   
+
+}
+
+.item6{
     grid-column: 1/ span 4;
    
 
 }    
 
-.item5{
+.item7{
     grid-column: 1/ span 4;
    
 
 } 
 
-.item6{
-    grid-column: 1/ span 5;
-}
 
