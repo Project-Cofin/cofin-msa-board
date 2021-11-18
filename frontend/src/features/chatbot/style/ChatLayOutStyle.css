@@ -1,0 +1,15 @@
+body {
+    padding-right: 0px;
+    box-sizing: content-box;
+  }
+
+.container{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 200px;
+  
+}
+
+.item13{/*챗봇*/
+    grid-column: 3;
+}

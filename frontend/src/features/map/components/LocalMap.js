@@ -79,7 +79,7 @@ function LocalMap() {
         <div
         className="map"
         id="map"
-        style={{ width: "1000px", height: "500px", float: "left"}}
+        style={{ width: "1500px", height: "500px", float: "left"}}
         ></div>
 
   );

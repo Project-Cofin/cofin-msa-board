@@ -1,20 +1,17 @@
 import * as React from 'react';
 import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
+import {Chat} from 'features/chatbot/index'
+import 'features/chatbot/style/ChatLayOutStyle.css'
 
-import 'features/common/style/LayOutStyle.css'
 
-
-
-const LayOut = (props) => {
+const ChatLayOut = (props) => {
   return (
     <div class = "wrapper">
       <div class="container">
-        <span class ="item1"><Header/></span>  
-        
-        <span class ="item3">{props.children}333</span>
-        <span class ="item4">444</span>
-        <span class ="item5">555</span>
+        <span class ="item1"><Header/></span>
+
+        <span class ="item13"><Chat/>챗봇</span>
         
         <span class ="item2"><Footer/></span>
       </div>
@@ -22,4 +19,4 @@ const LayOut = (props) => {
   );
 }
 
-export default LayOut;
+export default ChatLayOut;

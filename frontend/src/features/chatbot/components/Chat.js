@@ -2,10 +2,13 @@ import ChatBot from "react-simple-chatbot";
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import { LayOut } from "features/common";
+import { ChatLayOut } from "..";
 
-const Chat = () => {
+
+const Chat = (props) => {
   return (
-    <ThemeProvider
+    
+      <ThemeProvider
       theme={{
         background: "#f5f8fb",
         fontFamily: "Helvetica Neue",
@@ -18,7 +21,7 @@ const Chat = () => {
         userFontColor: "#4a4a4a",
       }}
     >
-      <LayOut>
+      
       <ChatBot
         steps={[
           {
@@ -78,8 +81,9 @@ const Chat = () => {
         botAvatar={require("./data/icon.png").default}
         userAvatar={require("./data/user.png").default}
       /><br/>
-      </LayOut>
-    </ThemeProvider>
+      
+      </ThemeProvider>
+
   );
 };
 

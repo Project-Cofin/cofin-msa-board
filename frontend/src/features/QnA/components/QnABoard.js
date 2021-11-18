@@ -22,7 +22,7 @@ const QnABoard = props => {
                 <div class="ui large form">
                     <div class="ui stacked segment">
                         
-                        <QnATable headersName={['번호', '제목', '작성자', '작성일', '조회수']}>
+                        <QnATable headersName={["번호", '제목', '작성자', '작성일', '조회수']}>
 
                             <QnATableRow>
                                 <QnATableColumn>1</QnATableColumn>

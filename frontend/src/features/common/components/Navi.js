@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from 'features/home/Images/virus.png';
 import styled from "styled-components";
 
-function NavBar() {
+function Navi() {
     
 return (
     <div className="Navigation">
@@ -13,22 +13,22 @@ return (
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <NavDropdown title="로그인" id="collasible-nav-dropdown" >
-                    <Nav.Link href="/user">로그인</Nav.Link>
-                    <Nav.Link href="/join">회원가입</Nav.Link>
+                    <Link href="/user">로그인</Link>
+                    <Link href="/join">회원가입</Link>
                 </NavDropdown>
                 <Nav.Link href= "/api/QnA">QnA</Nav.Link>
                 <NavDropdown title="지도" id="collasible-nav-dropdown">
-                    <Nav.Link href= "/organ/local">국내지도</Nav.Link>
-                    <Nav.Link href= "/organ/world">세계지도</Nav.Link>
+                    <Link href= "/organ/local">국내지도</Link>
+                    <Link href= "/organ/world">세계지도</Link>
                 </NavDropdown>
                 <Nav.Link href= "/organ/chat">챗봇</Nav.Link>
                 
                 <Nav.Link href="/main/corona">코로나</Nav.Link>
                 
                 <NavDropdown title="공지" id="collasible-nav-dropdown">
-                    <Nav.Link href= "/medpts">진료소</Nav.Link>
-                    <Nav.Link href= "/message">재난문자</Nav.Link>
-                    <Nav.Link href= "/news">뉴스</Nav.Link>
+                    <Link href= "/medpts">진료소</Link>
+                    <Link href= "/message">재난문자</Link>
+                    <Link href= "/news">뉴스</Link>
                 </NavDropdown>
             
             
@@ -38,9 +38,12 @@ return (
     )
 }
 
-export default NavBar;
+export default Navi;
 
-const Link = styled.link`
-variant: black;
+const Link =  styled.a`
+    display: block;
+    color : #0d6efd;
+    text-decoration:none;
+    margin: 5px 0px 5px 10px;
+    font-weight: bold;
 `
-

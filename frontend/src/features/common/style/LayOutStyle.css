@@ -17,39 +17,31 @@ body {
 }
 
 .item1{/*헤더*/
-    grid-column: 1/ span 1 ;
+    grid-column: 1/ span 5 ;
+    
   
 }
 
-.item2{/*네비바*/
-    grid-column: 2/ span 3 ;
-    grid-row: 1;
 
-}
-
-.item3{/*로그인*/
-    grid-column: 5/ span 2 ;
-    grid-row: 1;   
-  
-}
-
-.item4{/*푸터*/
+.item2{/*푸터*/
     grid-column: 1/ span 6;
+    
+    
 }
 
 
-.item5{
-    grid-column: 2/ span 4;   
+.item3{
+    grid-column: 1/ span 5;   
 
 }
 
-.item6{
+.item4{
     grid-column: 1/ span 4;
    
 
 }    
 
-.item7{
+.item5{
     grid-column: 1/ span 4;
    
 

@@ -1,18 +1,20 @@
-import { LayOut } from "features/common";
+
 import React from "react";
 
-import { LocalMap, LocalMapInfo, Options } from "..";
+import { LocalMap, LocalMapInfo, Options, MapLayOut } from "..";
 
 const LocalMapPage = () => {
 
     return (<>
-    <LayOut>
+    
         <div>
-            <Options/>
-            <LocalMap/>
-            <LocalMapInfo/>
+            <MapLayOut>
+                <Options/>
+                <LocalMap/>
+                <LocalMapInfo/>
+            </MapLayOut>
         </div>
-    </LayOut>
+    
     </>);
 };
 

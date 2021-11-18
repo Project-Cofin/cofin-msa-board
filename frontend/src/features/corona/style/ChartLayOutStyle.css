@@ -7,41 +7,41 @@
 }
 
 
-.item8{/*헤드차트*/
+.item6{/*헤드차트*/
     grid-column: 1/ 6;
     -ms-grid-column-span: span 6 ;
    
 
 }
 
-.item9{/*앱1*/
+.item7{/*앱1*/
     grid-column: 1/ span 1;
    
 
 }   
-.item10{/*앱2*/
+.item8{/*앱2*/
     grid-column: 2/ span 1;
    
 
 }   
-.item11{/*앱3*/
+.item9{/*앱3*/
     grid-column: 3/ span 1;
    
 
 }   
-.item12{/*앱4*/
+.item10{/*앱4*/
     grid-column: 4/ span 1;
    
 
 }    
 
-.item13{/*스택차트*/
+.item11{/*스택차트*/
     grid-column: 1/ span 2;
    
 
 } 
 
-.item14{/*메인차트*/
+.item12{/*메인차트*/
     grid-column: 3/ span 2;
    
 
