@@ -7,7 +7,7 @@ function Login(){
         <div className="Login">
             <Navbar bg="primary" variant="dark">
             <Nav className="mr-auto">
-                <li type='none' text-align="right">
+                <Li type='none' text-align="right">
                     <label for="user-id"/>아이디 &nbsp;
                     <input type="text" id="user-id"/>&nbsp; 
                 
@@ -15,7 +15,7 @@ function Login(){
                     <input type="password" id="pwd"/>&nbsp;
                     
                     <input type="submit" value="로그인"/>&nbsp;
-                </li>
+                </Li>
             </Nav>
             </Navbar>
         </div>
@@ -24,3 +24,6 @@ function Login(){
 
 export default Login;
 
+const Li = styled.li`
+    color: white;
+`

@@ -1,11 +1,14 @@
-.container{
+.ChartHeader{
+    grid-column: 1/ 6 ;
+}
+
+.Chartcontainer{
     display: grid;
     grid-template-columns: 200px ;
-    display: -ms-grid;
+
     justify-content: center
 
 }
-
 
 .item6{/*헤드차트*/
     grid-column: 1/ 6;
@@ -46,5 +49,4 @@
    
 
 }
-
 

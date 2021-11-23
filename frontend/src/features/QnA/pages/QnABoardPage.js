@@ -1,18 +1,15 @@
-import React from "react"
-
-import QnABoard from "../components/QnABoard";
-
-const QnABoardPage = props =>{
-
-
-return(<>
-    
-    <div>
-
-        <QnABoard></QnABoard>
-    </div>
-</>);
-};          
-
-
+import { LayOut } from 'features/common';
+import React from 'react';
+import QnAList from '../components/QnAList';
+ 
+const QnABoardPage = props => {
+  return (
+    <>
+    <LayOut>
+      <QnAList/>
+    </LayOut>
+    </>
+  )
+}
+ 
 export default QnABoardPage;

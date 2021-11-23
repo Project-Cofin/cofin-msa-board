@@ -1,50 +1,30 @@
-body {
-    padding-right: 0px;
-    box-sizing: content-box;
-  }
+.Header{
+    grid-column: 1/ 6 ;
+}
 
 .container{
-    display: -ms-grid;
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 500px 200px;
+    
   
 }
 .wrapper{
-
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.item1{/*헤더*/
-    grid-column: 1/ span 5 ;
-    
-  
-}
-
-
-.item2{/*푸터*/
-    grid-column: 1/ span 6;
-    
-    
-}
-
-
-.item3{
-    grid-column: 1/ span 5;   
 
 }
 
-.item4{
-    grid-column: 1/ span 4;
-   
 
-}    
+.item1{
+    grid-column: 1/6;   
 
-.item5{
-    grid-column: 1/ span 4;
-   
+}
 
-} 
+.Footer {    
+    grid-column: 1/ 6;   
+        
 
+}
 

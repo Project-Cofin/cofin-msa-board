@@ -4,6 +4,7 @@ import 'features/common/style/LayOutStyle.css'
 
 const Footer = () => {
     return(
+        <>
         <footer>
             <Foot class="ft_top_wrap normal">
                 <div class="ft_title font20"> <br/>
@@ -23,6 +24,7 @@ const Footer = () => {
                 
             </Foot>
         </footer>
+        </>
     )
 }
 

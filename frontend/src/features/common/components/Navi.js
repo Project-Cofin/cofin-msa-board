@@ -40,6 +40,7 @@ return (
 
 export default Navi;
 
+
 const Link =  styled.a`
     display: block;
     color : #0d6efd;

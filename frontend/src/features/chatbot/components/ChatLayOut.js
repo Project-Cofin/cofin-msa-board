@@ -8,12 +8,12 @@ import 'features/chatbot/style/ChatLayOutStyle.css'
 const ChatLayOut = (props) => {
   return (
     <div class = "wrapper">
-      <div class="container">
-        <span class ="item1"><Header/></span>
+      <div class="Chatcontainer">
+        <span class ="ChatHeader"><Header/></span>
 
         <span class ="item13"><Chat/>챗봇</span>
         
-        <span class ="item2"><Footer/></span>
+        <span class ="Footer"><Footer/></span>
       </div>
     </div>
   );

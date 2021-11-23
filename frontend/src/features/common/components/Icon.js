@@ -7,13 +7,13 @@ import styled from "styled-components";
 const Icon = () => {
     return(
         <>
-        <header>
+
             <Navbar bg="primary" variant="dark">
                 <a href="/">
                     &nbsp; <Img src={logo} width="100" height="100"/>
                 </a>
             </Navbar>
-        </header>
+
         </>
     )
 }
