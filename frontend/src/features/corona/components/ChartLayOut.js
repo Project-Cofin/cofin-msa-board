@@ -16,11 +16,10 @@ const ChartLayOut = (props) => {
         <span class ="item8"><AppBugReports/>앱2</span>
         <span class ="item9"><AppBugReports/>앱3</span>
         <span class ="item10"><AppBugReports/>앱4</span>
-
         <span class ="item11"><StackChart/>스택차트</span>
         <span class ="item12"><MainChart/>메인차트</span>
         
-      <span class="Footer"><Footer/></span>
+      <span class="ChartFooter"><Footer/></span>
       </div>
     </div>
   );

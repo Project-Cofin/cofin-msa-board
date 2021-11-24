@@ -1,28 +1,90 @@
-import React from 'react'
+import React, {useState} from 'react'
+import 'features/QnA/style/QnAWrite.css'
 import styled from "styled-components"
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { LayOut } from "features/common";
 
-const QnAWrite = () => (
+
+function QnAWrite (){
+    const [QnAContent, setQnAContent] = useState({
+        title: '',
+        content: ''
+    })
+
+    const [viewContent, setViewContent] = useState([]);
+
+    const getValue = e => {
+        const { name, value } = e.target;
+        setQnAContent({
+            ...QnAContent,
+            [name]: value
+        })
+    };
+    return(
     <LayOut>
-    <div>
-        <table border="1" width="1200" align="center">
-            <tr>
-                <th colSpan="2">
-                    QnA 글쓰기
-                </th>
-            </tr>
-            <tr>
-                <td width="50">
-                    <select>                   
-                        <option>질문</option>
-                        <option>백신</option>
-                        <option>코로나 확진</option>
-                    </select>
-                    <input type="text" placeholder="제목을 입력하시오"
-                    maxLength='20' cols="100"/>
-                </td>
-            </tr>
-            <div class="note-editor note-frame car">
+        {viewContent.map(element => 
+                        <div>
+                            <h2>{element.title}</h2>
+                            <div>
+                                {element.content}
+                            </div>
+                        </div>)}
+        <div>
+            <Table border="1" width="1200" align="center">
+                <tr>
+                    <th colSpan="2">
+                        QnA 글쓰기
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50">
+                        <select>                   
+                            <option>질문</option>
+                            <option>백신</option>
+                            <option>코로나 확진</option>
+                        </select>                        
+                    </td>
+                    
+                </tr>
+                <div className='form-wrapper'>
+                    <input className="title-input" type='text' placeholder='제목'  onChange={getValue} name='title'/>
+                    <CKEditor 
+                    min-height= "500px"
+                    editor={ClassicEditor}
+                    data="<p></p>"
+                    onReady={editor => {
+                        console.log('Editor is ready to use!', editor);
+                    }}
+                    onChange={(event, editor) => {
+                        const data = editor.getData();
+                        console.log({ event, editor, data });
+                        setQnAContent({
+                            ...QnAContent,
+                            content: data
+                        })
+                        console.log(QnAContent);
+                    }}
+                    onBlur={(event, editor) => {
+                        console.log('Blur.', editor);
+                    }}
+                    onFocus={(event, editor) => {
+                        console.log('Focus.', editor);
+                    }}
+                    />
+                    <Button className="submit-button"
+                    onClick={() => {
+                        setViewContent(viewContent.concat({...QnAContent}));
+                    }
+                    }>입력</Button>
+                </div>
+                
+                
+            </Table>
+        </div>
+    </LayOut>
+)}
+            {/* <div class="note-editor note-frame car">
                 <td>
                 <Tool class="note-toolbar card-header" role="toolbar">
                     <div class="note-btn-group btn-group note-font">
@@ -61,33 +123,16 @@ const QnAWrite = () => (
                 <td colSpan="2" align="right">
                     <input type="button" value="등록"/>
                     <input type="button" value="목록으로"/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    </LayOut>
-)
+                </td> 
+
+            </tr> */}
+
 
 export default QnAWrite
 
-const Note = styled.div`
-    display:none
+const Table = styled.table`
+    text-decoration: none;
 `
-
-const Block = styled.div`
-    height:508.344px
-    class=note-editable card-block
-    contenteditable=true
-`
-
-const Textarea = styled.textarea`
-    width: 1500px;
-    height: 500px;
-    resize: none;
-`
-
-const Tool = styled.div`
-    position: relative
-    top: 0px
-    width: 100%
+const Button = styled.button`
+    text-align: center;
 `

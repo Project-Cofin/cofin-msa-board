@@ -9,7 +9,7 @@ const LayOut = (props) => {
     <div class = "wrapper">
       <div class="container">
         <span class="Header"><Header/></span> 
-          <span class ="item1">{props.children}2</span>
+          <span class ="main">{props.children}</span>
         <span class="Footer"><Footer/></span>
       </div>
     </div>

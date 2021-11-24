@@ -5,7 +5,7 @@ import {Navbar} from 'react-bootstrap';
 import 'features/common/style/LayOutStyle.css'
 
 
-const Header = (props) => {
+const Header = () => {
     return(
         <>
         <header>

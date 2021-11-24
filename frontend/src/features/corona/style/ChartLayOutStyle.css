@@ -3,10 +3,17 @@
 }
 
 .Chartcontainer{
+    
     display: grid;
     grid-template-columns: 200px ;
 
     justify-content: center
+
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -48,5 +55,11 @@
     grid-column: 3/ span 2;
    
 
+}
+
+.ChartFooter {    
+    grid-column: 1/6; 
+    grid-row: 6;  
+   
 }
 
