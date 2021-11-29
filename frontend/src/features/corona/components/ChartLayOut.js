@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
+import styled from "styled-components";
 
 import 'features/corona/style/ChartLayOutStyle.css'
 import { AppBugReports, HeaderChart, MainChart, StackChart } from 'features/corona/index';
@@ -9,7 +10,7 @@ const ChartLayOut = (props) => {
   return (
     <div class = "wrapper">
       <div class="Chartcontainer">
-      <span class="ChartHeader"><Header/></span>    
+      <span className="header"><Header/></span> 
 
         <span class ="item6"><HeaderChart/>헤드차트</span>
         <span class ="item7"><AppBugReports/>앱1</span>
@@ -26,3 +27,4 @@ const ChartLayOut = (props) => {
 }
 
 export default ChartLayOut;
+

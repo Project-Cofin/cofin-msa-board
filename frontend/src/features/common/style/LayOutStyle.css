@@ -1,7 +1,9 @@
-.Header{
+.header{
     width: 100%;
-    grid-column: 1/ 6 ;
+    grid-column: 1/ 5 ;
+    justify-content: space-around;
     
+
 }
 
 .layoutcontainer{    

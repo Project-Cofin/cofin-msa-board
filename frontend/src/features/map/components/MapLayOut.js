@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
-
+import styled from "styled-components";
 import 'features/map/style/Map.css'
 import { LocalMap, LocalMapInfo, Options } from "features/map/index"
 
@@ -10,7 +10,7 @@ const MapLayOut = (props) => {
   return (
     <div class = "wrapper">
       <div class="Mapcontainer">
-        <span class="Header"><Header/></span>    
+      <span className="header"><Header/></span>  
 
         <span class ="Options"><Options/></span><br/>
         <span class ="LocalMap"><LocalMap/></span>

@@ -3,13 +3,14 @@ import Header from 'features/common/components/Header'
 import Footer from 'features/common/components/Footer'
 import {Chat} from 'features/chatbot/index'
 import 'features/chatbot/style/ChatLayOutStyle.css'
+import styled from "styled-components";
 
 
 const ChatLayOut = (props) => {
   return (
     <div class = "wrapper">
       <div class="Chatcontainer">
-        <span class ="ChatHeader"><Header/></span>
+        <span className="header"><Header/></span>  
 
         <span class ="item13"><Chat/>챗봇</span>
         
@@ -20,3 +21,4 @@ const ChatLayOut = (props) => {
 }
 
 export default ChatLayOut;
+

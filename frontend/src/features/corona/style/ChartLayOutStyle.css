@@ -1,7 +1,3 @@
-.ChartHeader{
-    width: 100%;
-    grid-column: 1/ 6 ;
-}
 
 .Chartcontainer{
     display: grid;
