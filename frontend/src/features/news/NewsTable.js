@@ -12,7 +12,7 @@ import {
 
   const StyledTableCell = withStyles(theme => ({
     head:{
-        backgroundColor: 'black', 
+        backgroundColor: '#246DFF', 
         color: 'white',
     },
     body:{

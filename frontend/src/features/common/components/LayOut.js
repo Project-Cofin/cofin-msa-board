@@ -7,7 +7,7 @@ import 'features/common/style/LayOutStyle.css'
 const LayOut = (props) => {
   return (
     <div class = "wrapper">
-      <div class="container">
+      <div class="layoutcontainer">
         <span class="Header"><Header/></span> 
           <span class ="main">{props.children}</span>
         <span class="Footer"><Footer/></span>

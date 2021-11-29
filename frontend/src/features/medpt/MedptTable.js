@@ -12,7 +12,7 @@ import {
 
 const StyledTableCell = withStyles(theme => ({
     head:{
-        backgroundColor: 'black', 
+        backgroundColor: '#246DFF', 
         color: 'white',
     },
     body:{
@@ -69,7 +69,7 @@ export default function MedptTable(){
                     <TableRow>
                         <StyledTableCell onclick="sortColumn('id')">연변/ medpt_id</StyledTableCell>
                         <StyledTableCell onclick="sortColumn('city')">시도/ medpt_city</StyledTableCell>
-                        <StyledTableCell>동읍면리/ <code>medpt_district</code></StyledTableCell>
+                        <StyledTableCell>동읍면리/ <code color="white">medpt_district</code></StyledTableCell>
                         <StyledTableCell>기관명/ <code>medpt_name</code></StyledTableCell>
                         <StyledTableCell>상세 주소/ <code>medpt_address</code></StyledTableCell>
                         <StyledTableCell>전화 번호/ <code>medpt_phone</code></StyledTableCell>

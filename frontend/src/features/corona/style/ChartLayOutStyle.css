@@ -1,20 +1,18 @@
 .ChartHeader{
+    width: 100%;
     grid-column: 1/ 6 ;
 }
 
 .Chartcontainer{
-    
     display: grid;
-    grid-template-columns: 200px ;
-
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 150px 550px 1fr;
     justify-content: center
 
 }
-.wrapper{
-    display: flex;
+.wrapper{    
     justify-content: center;
     align-items: center;
-
 }
 
 .item6{/*헤드차트*/

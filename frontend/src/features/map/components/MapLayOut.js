@@ -12,9 +12,9 @@ const MapLayOut = (props) => {
       <div class="Mapcontainer">
         <span class="Header"><Header/></span>    
 
-        <span class ="item14"><Options/></span><br/>
-        <span class ="item15"><LocalMap/></span><br/>
-        <span class ="item16"><LocalMapInfo/></span>
+        <span class ="Options"><Options/></span><br/>
+        <span class ="LocalMap"><LocalMap/></span>
+        <span class ="LocalMapInfo"><LocalMapInfo/></span>
 
         <span class="Footer"><Footer/></span>
       </div>

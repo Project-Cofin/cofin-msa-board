@@ -6,8 +6,8 @@ import { WorldMap } from "..";
 
 export default function WorldMapPage() {
     return(<>
-    <LayOut>
-        <WorldMap/>
-    </LayOut>
+        <LayOut>
+            <WorldMap/>
+        </LayOut>
     </>)
 }

@@ -1,25 +1,19 @@
 .Header{
+    width: 100%;
     grid-column: 1/ 6 ;
+    
 }
 
-.container{
-    
+.layoutcontainer{    
     display: grid;
     grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 200px 500px 200px;    
-    max-height: 800vh;
+    grid-template-rows: 200px 1fr 100px;
+    justify-content: center
     
-}
-
-.container > div {
-    display: grid;
-    justify-items: center;
-    align-items: stretch;
-    justify-items: stretch;
 }
 
 .wrapper{
-    display: flex;
+    
     justify-content: center;
     align-items: center;
 
@@ -27,7 +21,7 @@
 
 
 .main{
-    grid-column: 1/6;
+    grid-column: 2;
     align-items: center;
     
 
@@ -35,7 +29,7 @@
 
 .Footer {    
     grid-column: 1/6; 
-    grid-row: 4;  
+    grid-row: 5;  
    
 }
 
