@@ -21,20 +21,20 @@ function App() {
 
           <Route path="/" element= { <ChartPage/> }/>
           <Route path='/home' element= { '/' }/>
-          <Route path='/main/corona' element={<ChartPage/>}/>
+          <Route path='/cofinmain/corona' element={<ChartPage/>}/>
 
 
-          <Route path="/api/QnA" element={<QnABoardPage/>}/>
-          <Route path="/write" element={<QnAWritePage/>}/>
-          <Route path="/organ/chat" element={<ChatbotPage/>}/>
-          <Route path="/organ/local" element={<LocalMapPage/>}/>
-          <Route path='/organ/world' element= { <WorldMapPage/> }/>      
+          <Route path="/cofinapi/QnA" element={<QnABoardPage/>}/>
+          <Route path="/cofinwrite" element={<QnAWritePage/>}/>
+          <Route path="/cofinorgan/chat" element={<ChatbotPage/>}/>
+          <Route path="/cofinorgan/local" element={<LocalMapPage/>}/>
+          <Route path='/cofinorgan/world' element= { <WorldMapPage/> }/>      
 
-          <Route path='/medpts' element={<MedptPage/>}/>
-          <Route path='/message' element={<MsgPage/>}/>
-          <Route path='/news' element={<NewsPage/>}/>
-          <Route path='/user' element={<LoginPage/>}/>
-          <Route path='/join' element={<JoinPage/>}/>
+          <Route path='/cofinmedpts' element={<MedptPage/>}/>
+          <Route path='/cofinmessage' element={<MsgPage/>}/>
+          <Route path='/cofinnews' element={<NewsPage/>}/>
+          <Route path='/cofinuser' element={<LoginPage/>}/>
+          <Route path='/users/cofinjoin' element={<JoinPage/>}/>
       
     </Routes>  
 </>)}

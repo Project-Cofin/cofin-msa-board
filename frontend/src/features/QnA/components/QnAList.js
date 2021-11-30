@@ -89,7 +89,7 @@ const QnAList = () => {
                     </tr>
                 </thead>
                 <Tr info={info} handleRemove={handleRemove} handleEdit={handleEdit}/><br/>
-                <a href="/write"><button class="ui fluid large teal submit button">게시글 작성하기</button></a>
+                <a href="/cofinwrite"><button class="ui fluid large teal submit button">게시글 작성하기</button></a>
             </table><br/>
             
             {modalOn && <Modal selectedData={selected} handleCancel={handleCancel}
