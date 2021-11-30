@@ -69,16 +69,16 @@ export default function MedptTable(){
                     <TableRow>
                         <StyledTableCell onclick="sortColumn('id')">연변/ medpt_id</StyledTableCell>
                         <StyledTableCell onclick="sortColumn('city')">시도/ medpt_city</StyledTableCell>
-                        <StyledTableCell>동읍면리/ <code>medpt_district</code></StyledTableCell>
-                        <StyledTableCell>기관명/ <code>medpt_name</code></StyledTableCell>
-                        <StyledTableCell>상세 주소/ <code>medpt_address</code></StyledTableCell>
-                        <StyledTableCell>전화 번호/ <code>medpt_phone</code></StyledTableCell>
-                        <StyledTableCell>주중 운영시간/ <code>medpt_hr_wkday</code></StyledTableCell>
-                        <StyledTableCell>토 운영시간<code>medpt_hr_sat</code></StyledTableCell>
-                        <StyledTableCell>일`공휴일 운영시간<code>medpt_hr_holiday</code></StyledTableCell>
-                        <StyledTableCell>관할보건소<code>medpt_gov</code></StyledTableCell>
-                        <StyledTableCell>관보 연락처<code>medpt_gov_phone</code></StyledTableCell>
-                        <StyledTableCell>note/ <code>medpt_note</code></StyledTableCell>
+                        <StyledTableCell>동읍면리/ medpt_district</StyledTableCell>
+                        <StyledTableCell>기관명/medpt_name</StyledTableCell>
+                        <StyledTableCell>상세 주소/ <>medpt_address</></StyledTableCell>
+                        <StyledTableCell>전화 번호/ <>medpt_phone</></StyledTableCell>
+                        <StyledTableCell>주중 운영시간/ <>medpt_hr_wkday</></StyledTableCell>
+                        <StyledTableCell>토 운영시간<>medpt_hr_sat</></StyledTableCell>
+                        <StyledTableCell>일`공휴일 운영시간<>medpt_hr_holiday</></StyledTableCell>
+                        <StyledTableCell>관할보건소<>medpt_gov</></StyledTableCell>
+                        <StyledTableCell>관보 연락처<>medpt_gov_phone</></StyledTableCell>
+                        <StyledTableCell>note/ <>medpt_note</></StyledTableCell>
                         {/* onclick sto sortCol by values */}
                     </TableRow>
                 </TableHead>

@@ -61,12 +61,12 @@ export default function MedptTable(){
             <Table className={classes.table} aria-label="customized table">
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell onclick="sortColumn('id')">ID/ <code>message_id</code></StyledTableCell>
-                        <StyledTableCell onclick="sortColumn('date')">date/ <code>message_date</code></StyledTableCell>
-                        <StyledTableCell>time/ <code>message_time</code></StyledTableCell>
-                        <StyledTableCell>city/ <code>message_city</code></StyledTableCell>
-                        <StyledTableCell>district/ <code>message_district</code></StyledTableCell>
-                        <StyledTableCell>summary/ <code>message_summary</code></StyledTableCell>
+                        <StyledTableCell onclick="sortColumn('id')">ID/ <>message_id</></StyledTableCell>
+                        <StyledTableCell onclick="sortColumn('date')">date/ <>message_date</></StyledTableCell>
+                        <StyledTableCell>time/ <>message_time</></StyledTableCell>
+                        <StyledTableCell>city/ <>message_city</></StyledTableCell>
+                        <StyledTableCell>district/ <>message_district</></StyledTableCell>
+                        <StyledTableCell>summary/ <>message_summary</></StyledTableCell>
                         {/* <StyledTableCell>tag/ <code>message_tag</code></StyledTableCell> */}
                     </TableRow>
                 </TableHead>

@@ -55,7 +55,7 @@ export default function MedptTable(){
             <Table className={classes.table} aria-label="customized table">
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell>연변/ <code>medpt_id</code></StyledTableCell>
+                        <StyledTableCell>연변/ <>medpt_id</></StyledTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
