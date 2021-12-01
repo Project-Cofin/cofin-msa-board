@@ -6,6 +6,7 @@ import QnATableColumn from "features/QnA/table/QnATableColumn";
 import axios from 'axios';
 import Tr from './Tr';
 import Modal from './Modal';
+import { Link } from "react-router-dom";
  
 const QnAList = () => {
     const [info, setInfo] = useState([]);
@@ -89,7 +90,7 @@ const QnAList = () => {
                     </tr>
                 </thead>
                 <Tr info={info} handleRemove={handleRemove} handleEdit={handleEdit}/><br/>
-                <a href="/cofinwrite"><button class="ui fluid large teal submit button">게시글 작성하기</button></a>
+                <Link to="/write"><button class="ui fluid large teal submit button">게시글 작성하기</button></Link>
             </table><br/>
             
             {modalOn && <Modal selectedData={selected} handleCancel={handleCancel}

@@ -1,34 +1,35 @@
 import React from "react";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import 'features/common/style/NaviStyle.css'
+
+
 
 function Navi() {
-    
+
 return (
     <div className="Navigation">
         <Navbar bg="primary" variant="dark" id="centerboxs">
-            
             <Nav className="mr-auto">
-                <Link to="/">Home</Link>
-                <NavDropdown title="로그인" id="collasible-nav-dropdown" >
-                    <Link to="/cofinuser">로그인</Link>
-                    <Link to="/users/cofinjoin">회원가입</Link>
+            &emsp;<Link className="NavLink" to="/">Home</Link>
+            &emsp;<NavDropdown title="로그인" id="collasible-nav-dropdown" >
+                    <Link className="NavLink2" to="/user">로그인</Link>
+                    <Link className="NavLink2" to="/join">회원가입</Link>
                 </NavDropdown>
-                <Link to= "/cofinapi/QnA">QnA</Link>
-                <NavDropdown title="지도" id="collasible-nav-dropdown">
-                    <Link to= "/cofinorgan/local">국내지도</Link>
-                    <Link to= "/cofinorgan/world">세계지도</Link>
+            &emsp;<Link className="NavLink" to= "/QnA">QnA</Link>
+            &emsp;<NavDropdown title="지도" id="collasible-nav-dropdown">
+                    <Link className="NavLink2" to= "/organ/local">국내지도</Link>
+                    <Link className="NavLink2" to= "/organ/world">세계지도</Link>
                 </NavDropdown>
-                <Link to= "/cofinorgan/chat">챗봇</Link>
+            &emsp;<Link className="NavLink" to= "/organ/chat">챗봇</Link>
                 
-                <Link to="/cofinmain/corona">코로나</Link>
+            &emsp;<Link className="NavLink" to="/main/corona">코로나</Link>
                 
-                <NavDropdown title="공지" id="collasible-nav-dropdown">
-                    <Link to= "/cofinmedpts">진료소</Link>
-                    <Link to= "/cofinmessage">재난문자</Link>
-                    <Link to= "/cofinnews">뉴스</Link>
+            &emsp;<NavDropdown title="공지" id="collasible-nav-dropdown">
+                    <Link className="NavLink2"to= "/medpts">진료소</Link>
+                    <Link className="NavLink2"to= "/message">재난문자</Link>
+                    <Link className="NavLink2"to= "/news">뉴스</Link>
                 </NavDropdown>
             
             
