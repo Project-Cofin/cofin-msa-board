@@ -1,102 +1,108 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Pagination from '../common/Pagination';
+import { paginate } from '../utils/paginate';
 import styled from "styled-components"
-import QnATable from "features/QnA/table/QnATable";
-import QnATableRow from "features/QnA/table/QnATableRow";
-import QnATableColumn from "features/QnA/table/QnATableColumn";
 import axios from 'axios';
-import Tr from './Tr';
-import Modal from './Modal';
+
 import { Link } from "react-router-dom";
  
 const QnAList = () => {
-    const [info, setInfo] = useState([]);
-    const [selected, setSelected] = useState('');
-    const [modalOn, setModalOn] = useState(false);
-    const nextId = useRef(11);
-
-    useEffect(() => {
-        axios.get('http://jsonplaceholder.typicode.com/users')
-        .then(res => setInfo(res.data))
-        .catch(err => console.log(err));
-    }, []);
-
-    const handleSave = (data) => {        
-        if (data.id) {
-            setInfo(
-                info.map(row => data.id === row.id ? {
-                    id: data.id,
-                    name: data.name,
-                    email: data.email,
-                    phone: data.phone,
-                    website: data.website
-                } : row))
-        } else {
-            setInfo(info => info.concat(
-                {
-                    id: nextId.current,
-                    name: data.name,
-                    email: data.email,
-                    phone: data.phone,
-                    website: data.website
-                }
-            ))
-            nextId.current += 1;
-        }
+    const getQnA = () => { // 영화 정보를 반환하는 함수
+      const QnA = [
+        { no: 1, title: "질문 1", writer: "띠리빠바", date: "2019-07-17", review: "5"},
+        { no: 2, title: "질문 2", writer: "아모르파뤼", date: "2019-07-17", review: "5"},
+        { no: 3, title: "신고 1", writer: "십센티", date: "2019-07-17", review: "5"},
+        { no: 4, title: "질문 3", writer: "뿌바라", date: "2019-07-17", review: "5"},
+        { no: 5, title: "답변 1", writer: "넥넥타르", date: "2019-07-17", review: "5"},
+        { no: 6, title: "질문 4", writer: "알로하오에", date: "2019-07-17", review: "5"},
+        { no: 7, title: "답변 2", writer: "채강소다파팅", date: "2019-07-17", review: "5"},
+        { no: 8, title: "신고 2", writer: "빠다꼬꼬낫", date: "2019-07-17", review: "5"},
+        { no: 9, title: "질문 5", writer: "유후유후", date: "2019-07-17", review: "5"},
+        { no: 10, title: "질문 6", writer: "명란젓에밥비벼머거", date: "2019-07-17", review: "5"}
+      ]
+      
+      return QnA;
     }
+  
+    const [QnA, setQnA] = useState({
+        data: getQnA(),
+        pageSize: 5,
+        currentPage: 1
+    });
 
-    const handleRemove = (id) => {
-        setInfo(info => info.filter(item => item.id !== id));
-    }
+    const handlePageChange = (page) => {
+        setQnA({ ...QnA, currentPage: page });
+      }
+    
+    const { data, pageSize, currentPage } = QnA;
 
-    const handleEdit = (item) => {
-        setModalOn(true);
-        const selectedData = {
-            id: item.id,
-            name: item.name,
-            email: item.email,
-            phone: item.phone,
-            website: item.website
-        };
-        console.log(selectedData);
-        setSelected(selectedData);
-    };
+    const pagedQnA = paginate(data, currentPage, pageSize);
+  
+    const { length: count } = QnA.data;
+    
+    if(count === 0)
+      return <p>정보가 없습니다.</p>
 
-    const handleCancel = () => {
-        setModalOn(false);
-    }
-
-    const handleEditSubmit = (item) => {
-        console.log(item);
-        handleSave(item);
-        setModalOn(false);
-
-        
-    }
     return (
-        <div class="ui middle aligned center aligned grid" align="center">
+        <>
+        <p>{count} 개의 질문이 있습니다.</p>
+        <div class="ui middle aligned center aligned grid">
             <br/><h2 class="ui teal image header">
                 QnA 게시판
             </h2>
-            <table className="min-w-full table-auto text-gray-800">
-                <thead className="justify-between">
-                    <tr className="bg-gray-800">
-                        <th className="text-gray-300 px-4 py-3">번호.</th>                        
-                        <th className="text-gray-300 px-4 py-3">작성자.</th>
-                        <th className="text-gray-300 px-4 py-3">제목</th>
-                        <th className="text-gray-300 px-4 py-3">작성일.</th>
-                        <th className="text-gray-300 px-4 py-3">조회수.</th>
-                        <th className="text-gray-300 px-4 py-3">Edit.</th>
-                        <th className="text-gray-300 px-4 py-3">Delete.</th>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
                     </tr>
                 </thead>
-                <Tr info={info} handleRemove={handleRemove} handleEdit={handleEdit}/><br/>
-                <Link to="/write"><button class="ui fluid large teal submit button">게시글 작성하기</button></Link>
-            </table><br/>
+                <tbody>
+                    {pagedQnA.map((QnA) => (
+                        <tr key={QnA.title}>
+                            <td>{QnA.no}</td>
+                            <td>{QnA.title}</td>
+                            <td>{QnA.writer}</td>
+                            <td>{QnA.date}</td>
+                            <td>{QnA.review}</td>
+                        </tr>
+                    ))}
+                </tbody>
+
+                
             
-            {modalOn && <Modal selectedData={selected} handleCancel={handleCancel}
-            handleEditSubmit={handleEditSubmit}/>}
+                <Pagination
+                    pageSize={pageSize} 
+                    currentPage={currentPage} 
+                    itemsCount={count}
+                    onPageChange={handlePageChange}
+                />
+                <div class="row justify-content-end my-3">
+                    <div class="col-4 input-group">
+                        <input type="text" class="form-control kw" value=""/>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <Link to="/write"><button class="ui fluid large teal submit button">게시글 작성하기</button></Link>
+                {/* <nav aria-label="Page navigation example">
+                    <ul className="pagination">
+                    <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                    <li className="page-item"><a className="page-link" href="#">1</a></li>
+                    <li className="page-item"><a className="page-link" href="#">2</a></li>
+                    <li className="page-item"><a className="page-link" href="#">3</a></li>
+                    <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav> */}
+                
+            </table><br/>
+         
         </div>
-    );
+    </>);
 };
  
 export default QnAList;
