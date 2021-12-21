@@ -1,6 +1,0 @@
-<mapper namespace="QnA.mapper.QnAMapper">
-    <select id="selectQnAList" resultType="QnA.domain.QnADto">
-
-    </select>
-
-</mapper>
